@@ -1,0 +1,64 @@
+.wrapper {
+  max-width: 800px;
+}
+
+.label {
+  max-width: 80px;
+  text-align: center;
+}
+
+.wrapper .contentBx {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.wrapper .contentBx .label {
+  position: relative;
+  padding: 10px;
+  background: rgba(44, 103, 210);
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrapper .contentBx .content {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+  overflow-y: auto;
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  /* display: none; */
+}
+
+.wrapper .contentBx.active .content {
+  height: 250px;
+  padding: 10px;
+  border: 1px solid grey;
+  /* display: block; */
+}
+
+.collapsible * {
+  display: block;
+  margin-top: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: solid lightgray 1px;
+  background-color: white;
+}
+
+.collapsible {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 2s;
+}
+
+.collapsible.show {
+  overflow: hidden;
+  max-height: 400px;
+  transition: max-height 2s;
+}
